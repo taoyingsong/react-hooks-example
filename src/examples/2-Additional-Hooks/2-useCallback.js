@@ -32,7 +32,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 //   // ...
 // }
 export default ()=> {
-  // getFetchUrl仅在某个依赖项改变时才会更新，这样下边依赖数组就有意义了。
+  // getFetchUrl仅在某个依赖项改变时才会更新，这样下边useEffect的依赖数组就有意义了。
   // useCallback(fn, deps) 相当于 useMemo(() => fn, deps)。
   const getFetchUrl = useCallback((query) => {
     return 'https://test/search?query=' + query;
