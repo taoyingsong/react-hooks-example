@@ -42,10 +42,17 @@ export default ()=> {
     <>
       <h1>{count}</h1>
       <input value={step} onChange={e => {
-        dispatch({
-          type: 'step',
-          step: Number(e.target.value)
-        });
+        dispatch((dispatch) => {
+          console.log('dispatch in dispatch is:', dispatch)
+          dispatch({
+            type: 'step',
+            step: Number(e.target.value)
+          });
+        })
+        // dispatch({
+        //   type: 'step',
+        //   step: Number(e.target.value)
+        // });
       }} />
     </>
   );
@@ -53,14 +60,28 @@ export default ()=> {
 
 function reducer(state, action) {
   const { count, step } = state;
-  if (action.type === 'tick') {
-    return { count: count + step, step };
-  } else if (action.type === 'step') {
-    return { count, step: action.step };
-  } else {
-    throw new Error();
+  switch (action.type) {
+    case 'tick':
+      console.log('tick action......')
+      return { count: count + step, step };
+    case 'step':
+      console.log('step action......')
+      return { count, step: action.step };
+    default:
+      throw new Error();
   }
 }
+
+// function reducer(state, action) {
+//   const { count, step } = state;
+//   if (action.type === 'tick') {
+//     return { count: count + step, step };
+//   } else if (action.type === 'step') {
+//     return { count, step: action.step };
+//   } else {
+//     throw new Error();
+//   }
+// }
 
 /**
  * <Counter step={1} />
