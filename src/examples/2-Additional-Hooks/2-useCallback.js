@@ -56,7 +56,7 @@ export default ()=> {
 /**
  * 1.
  * 以往class中因为函数不是数据流的一部分，我们会硬着头皮把query本身传入 Child 组件。
- * Child 虽然实际并没有直接使用这个query的值，但能在它改变的时候触。
+ * Child 虽然实际并没有直接使用这个query的值，但能在它改变的时候触发操作。
  *
  * 2.
  * 有了useCallback之后就完全不用了。

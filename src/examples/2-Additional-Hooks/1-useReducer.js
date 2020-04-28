@@ -42,17 +42,17 @@ export default ()=> {
     <>
       <h1>{count}</h1>
       <input value={step} onChange={e => {
-        dispatch((dispatch) => {
-          console.log('dispatch in dispatch is:', dispatch)
-          dispatch({
-            type: 'step',
-            step: Number(e.target.value)
-          });
-        })
-        // dispatch({
-        //   type: 'step',
-        //   step: Number(e.target.value)
-        // });
+        // dispatch((dispatch) => {
+        //   console.log('dispatch in dispatch is:', dispatch)
+        //   dispatch({
+        //     type: 'step',
+        //     step: Number(e.target.value)
+        //   });
+        // })
+        dispatch({
+          type: 'step',
+          step: Number(e.target.value)
+        });
       }} />
     </>
   );
