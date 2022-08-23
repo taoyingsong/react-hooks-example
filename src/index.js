@@ -1,12 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
+
+// // ReactDOM.render is no longer supported in React 18
+// function render() {
+//   ReactDOM.render(<App />, document.getElementById("root"))
+// }
+
 function render() {
-  ReactDOM.render(<App />, document.getElementById("root"))
+  const root = ReactDOM.createRoot(document.getElementById("root"))
+  root.render(<App />)
 }
 
 render()
