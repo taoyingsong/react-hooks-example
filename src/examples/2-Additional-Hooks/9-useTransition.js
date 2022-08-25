@@ -1,7 +1,4 @@
 import React, { useState, useTransition } from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import ReactMarkdown from 'react-markdown'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default () => {
   // 返回 【状态，启动该过渡任务的函数】
@@ -26,7 +23,7 @@ export default () => {
         </section>
         <br />
         <section>
-            <div><a target="_blank" href="https://zhuanlan.zhihu.com/p/425007915">文章</a> -- 看markdown文件，9-useTransition.md</div>
+           看markdown文件，9-useTransition.md
         </section>
     </>
   );
