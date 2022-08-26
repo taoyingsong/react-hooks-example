@@ -1,6 +1,6 @@
 ### 为什么不使用 useLayoutEffect？
 
-useLayoutEffect hook 被用来从 DOM 中读取布局，并同步地重新渲染。
+**useLayoutEffect hook 被用来从 DOM 中读取布局，并同步地重新渲染。**
 
 假设我们有一些插入样式的组件和一些读取布局的组件。如果我们使用 useLayoutEffect hook 来插入样式，它会导致在单遍中多次计算布局。此外，如果一个钩子试图在插入 CSS 之前读取布局，它将读取不正确的布局。
 

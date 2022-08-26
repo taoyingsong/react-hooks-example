@@ -65,8 +65,8 @@ setTimeout(() => {
 
 通常，使用 transition 的更新分为两类：
 
-1. Slow rendering：因为 React 需要执行大量工作来渲染 UI。这里是一个添加 startTransition 的[真实演示](https://github.com/reactwg/react-18/discussions/65)，以保持应用程序在昂贵的重新渲染中间的响应
-2. Slow network：针对需要网络请求的数据来更新 UI 的情况
+1. **Slow rendering**：因为 React 需要执行大量工作来渲染 UI。这里是一个添加 startTransition 的[真实演示](https://github.com/reactwg/react-18/discussions/65)，以保持应用程序在昂贵的重新渲染中间的响应
+2. **Slow network**：针对需要网络请求的数据来更新 UI 的情况
 
 ### 和 useDeferredValue 的区别
 

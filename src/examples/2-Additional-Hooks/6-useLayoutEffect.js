@@ -3,7 +3,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 // 1. useLayoutEffect 相比 useEffect，通过同步执行状态更新可解决一些特性场景下的页面闪烁问题。
 // 2. useEffect不会阻塞渲染（【异步】） 可以满足99%的场景，而且 useLayoutEffect 会阻塞渲染（【同步】），请谨慎使用。
 
-// 其函数签名与 useEffect 相同，【但它会在所有的 DOM 变更之后同步调用 effect。可以使用它来读取 DOM 布局并同步触发重渲染。在浏览器执行绘制之前，useLayoutEffect 内部的更新计划将被同步刷新】。
+// 其函数签名与 useEffect 相同，【但它会在所有的 **DOM 变更之后** 同步调用 effect。可以使用它来读取 DOM 布局并同步触发重渲染。在 **浏览器执行绘制之前**，useLayoutEffect 内部的更新计划将被同步刷新】。
 // 尽可能使用标准的 useEffect 以避免阻塞视觉更新。
 
 // ps: 
